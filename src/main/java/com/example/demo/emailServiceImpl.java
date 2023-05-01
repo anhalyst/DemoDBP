@@ -19,10 +19,6 @@ public class emailServiceImpl implements emailService {
         return emailRepository.getAllName();
     }
 
-    @Override
-    public List<Integer> getAllEuid() {
-        return emailRepository.getAllEuid();
-    }
 
     @Override
     public Result e2a() {
@@ -31,11 +27,11 @@ public class emailServiceImpl implements emailService {
 
     @Override
     public String e3a(int id) {
-        String rep = "";
+        StringBuilder rep = new StringBuilder();
         List<Map<String,Object>> res = emailRepository.e3a(id).getResult();
         for (Map<String,Object> row:res){
-            rep = rep + row.get("username") + "@" +row.get("domain");
+            rep.append(row.get("username")).append("@").append(row.get("domain"));
         }
-        return rep;
+        return rep.toString();
     }
 }
