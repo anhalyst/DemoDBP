@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Euid list</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+</head>
+<body>
+<h2> I can print query here </h2>
+<h1>Here to display the result of query</h1>
+<table>
+  <thead>
+  <tr> EUID </tr>
+  </thead>
+  <tbody>
+  <tr th:each="id:${id}">
+    <td th:text="${id}"> </td>
+    <td th:text="${id+1}"> </td>
+    <td th:text="${id+1}"> </td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>
