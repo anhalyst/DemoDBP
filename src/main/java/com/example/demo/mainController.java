@@ -51,7 +51,7 @@ public class mainController {
                 query = res.getQuery();
                 break;
             case "b":
-                //TODO: Implement Exercise part 2 b->i
+                //TODO: Implement Subtask b->i
                 break;
             case "c":
                 break;
